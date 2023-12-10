@@ -233,3 +233,4 @@ Temporary Items
 # add your custom gitignore here:
 !.gitignore
 !.gitsubmodules
+bin

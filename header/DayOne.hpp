@@ -4,8 +4,12 @@
 
 #include "../header/AdventOfCode.hpp"
 #include <fstream>
+#include <list>
 using std::ifstream;
 #include <iostream>
+
+#define ZERO_ASCII 48
+#define NINE_ASCII 57
 
 /**
  * @brief The DayOne class
