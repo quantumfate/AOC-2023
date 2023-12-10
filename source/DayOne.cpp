@@ -10,9 +10,9 @@ int DayOne::retrieveCipher(const std::string& line) {
   int* firstPointer  = nullptr;
   int* secondPointer = &second;
 
-  for (int i = 0; i < (int)line.length() - 1; ++i) {
+  for (int i = 0; i < (int)line.length(); ++i) {
     int code = static_cast<int>(line[i]);
-    if (code >= ZERO_ASCII || code <= NINE_ASCII) {
+    if (code >= ZERO_ASCII && code <= NINE_ASCII) {
       second = code;
       if (firstPointer == nullptr) {
         first        = code;
@@ -30,11 +30,10 @@ void DayOne::run() {
   int          sum     = 0;
   linkedLines* current = this->getHead();
 
-  printList();
   while (current->next != nullptr) {
-    sum += this->retrieveCipher(current->value);
+    sum += this->retrieveCipher(current->next->value);
     current = current->next;
   }
 
-  printf("%d", sum);
+  printf("Sum of cipher %d", sum);
 }

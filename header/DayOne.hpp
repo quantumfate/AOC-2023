@@ -25,7 +25,7 @@ public:
    */
   void run() override;
 
-private:
+public:
   /**
    * @brief Retrieves the cipher from a line.
    * @param line

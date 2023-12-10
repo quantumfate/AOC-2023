@@ -3,6 +3,8 @@
 #define TEST_HPP
 
 #include "../header/DayOne.hpp"
+#include <assert.h>
+#include <string>
 
 class TestAdventOfCode
 {

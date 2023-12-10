@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -Wextra
+CXXFLAGS = -std=c++11 -Wall -Wextra -g
 SRCDIR = source
 INCDIR = header
 OBJDIR = obj
@@ -52,7 +52,7 @@ $(TEST_OBJECT): $(TEST_SOURCE) $(TEST_HEADER) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -I$(INCDIR) -c $< -o $@
 
 run_main:
-	@cd $(BINDIR) && ./$(MAIN_EXECUTABLE)
+	@cd $(BINDIR) && ./$(MAIN_EXECUTABLE) $(DAY)
 
 run_test:
 	@cd $(BINDIR) && ./$(TEST_EXECUTABLE)
